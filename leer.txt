@@ -1,0 +1,24 @@
+a.-Instalar base de datos libros en xampp con  el fichero libros.sql
+b.- npm install
+c- para ejecutarlo node server.js
+
+PARA PROBARLO EN POSTMAN
+
+1.- Metodo GET: http://localhost:3000/libros
+2.- Metodo PUT: http://localhost:3000/update body-> raw 
+{        
+    "isbn": 12345,
+    "titulo": "1eduard2o1111",
+    "autor": "b",
+    "genero": "c",
+    "resumen": "abcd"
+}
+
+3.- Metodo INSERT: http://localhost:3000/insert body-> raw 
+{        
+    "isbn": 12345,
+    "titulo": "1eduard2o1111",
+    "autor": "b",
+    "genero": "c",
+    "resumen": "abcd"
+}       
