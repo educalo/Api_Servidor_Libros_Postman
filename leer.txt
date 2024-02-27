@@ -2,7 +2,7 @@ a.-Instalar base de datos libros en xampp con  el fichero libros.sql
 b.- npm install
 c- para ejecutarlo node server.js
 
-PARA PROBARLO EN POSTMAN
+PARA PROBARLO EN POSTMAN CON RAW FORMATO OBJETOS
 
 1.- Metodo GET: http://localhost:3000/libros
 2.- Metodo PUT: http://localhost:3000/update body-> raw 
@@ -21,4 +21,25 @@ PARA PROBARLO EN POSTMAN
     "autor": "b",
     "genero": "c",
     "resumen": "abcd"
-}       
+}    
+
+
+PARA PROBARLO CON BODY FORM_URLENCODED
+
+tengo que utilizar este encabezado
+
+const express = require('express');
+const bodyParser = require('body-parser')
+const mysql = require('mysql');
+const cors = require('cors');
+
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.json())   
+
+
+y luego poner la key y el valor
